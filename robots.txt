@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://dogsbreedrecognition.netlify.app/sitemap.xml
