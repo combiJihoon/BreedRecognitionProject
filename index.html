@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css" />
 				<meta name="naver-site-verification" content="e4d987a3f357859e8ba325d1f766fe1db2926855" />
+				<title>나와 닮은 강아지는?</title>
     </head>
     <body>
         <!DOCTYPE html>
@@ -19,8 +20,6 @@
                     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
                     crossorigin="anonymous"
                 />
-
-                <title>나와 닮은 강아지는?</title>
                 <link href="style.css" rel="stylesheet" type="text/css" />
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <script
@@ -131,12 +130,13 @@
         </div> -->
                     <div class="file-upload-content">
                         <img class="file-upload-image" id="animal-image" src="#" alt="your image" />
-                        <div id="loading" class="animated bounce">
-                            <div class="spinner-border" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-                            <p class="text-center">AI가 당신의 품종을 분석중입니다.</p>
-                        </div>
+                        <div id="loading" class="animated bounce" style="display: none;">
+											<div class="spinner-border" role="status">
+													<span class="sr-only">Loading...</span>
+											</div>
+											<p class="text-center">AI가 당신의 품종을 분석중입니다.</p>
+									</div>
+
                         <p class="result-message"></p>
                         <div
                             id="label-container"
