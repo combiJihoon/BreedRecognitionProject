@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Nanum Gothic Coding';
   background-color: #ffffff;
 }
 
@@ -131,7 +131,6 @@ body {
   padding: 2.1% 7.7%;
 }
 .navbar-light .navbar-brand {
-  font-family: NanumSquareR;
   line-height: 1.68;
   text-align: left;
   margin-left: 2rem;
@@ -217,7 +216,6 @@ img {
 
 html, body {
 	height: 100%;
-	font-family: 'Roboto', sans-serif;
 }
 .page-content {
 	height: 100%;
