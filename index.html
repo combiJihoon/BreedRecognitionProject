@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light nv-distance">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">나는 어떤 강아지와 닮았을까?</a>
+            <!-- <a class="navbar-brand" href="#">AI가 분석하는 닮은 견종 찾기!</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -98,7 +98,7 @@
                         <div class="circular-loader">
                         </div>
                         <div class="loader-message">AI가 분석 중이예요!</div>
-                    </div>
+                    </div>		
                 </div>
 
                 <!-- <div id="loading" class="animated bounce" style="display: none;">
@@ -136,6 +136,7 @@
 
                     reader.onload = function (e) {
                         $('.image-upload-wrap').hide();
+												$('#loading').show();
                         $('.file-upload-image').attr('src', e.target.result);
                         $('.file-upload-content').show();
                         $('.image-title').html(input.files[0].name);
@@ -258,11 +259,13 @@
                 }
                 $('.result-message').html(resultMessage);
                 for (let i = 0; i < maxPredictions; i++) {
-                    const classPrediction =
-                        prediction[i].className +
-                        ': ' +
-                        prediction[i].probability.toFixed(2);
-                    labelContainer.childNodes[i].innerHTML = classPrediction;
+									const classPrediction =
+											prediction[i].className +
+											': ' +
+											prediction[i].probability.toFixed(2);
+											if (prediction[i].probability.toFixed(2)!=0) {
+												labelContainer.childNodes[i].innerHTML = classPrediction;
+											}
                 }
             }
         </script>
