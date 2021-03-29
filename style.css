@@ -145,7 +145,7 @@ body {
 }
 
 .section {
-    margin-top: 80px;
+    margin-top: 0px;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -200,6 +200,7 @@ img {
 #addThis {
     margin-top: 50px;
 }
+
 
 
 /* addthis_inline_share_toolbox {
@@ -663,4 +664,7 @@ body {
 
 p {
     font-weight: 900;
+}
+.footer {
+	padding-top: 30%; 
 }
