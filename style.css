@@ -15,9 +15,13 @@ body {
     padding: 10% 5%;
     margin: 0 auto;
     border-radius: 10px;
-    border: solid 1.5px #f17f7f;
+    /* border: solid 1.5px #f17f7f;
     ;
     background-color: #f17f7f;
+    ; */
+		border: solid 1.5px #7fc7f191;
+    ;
+    background-color: #7fc7f191;
     ;
 }
 
@@ -177,8 +181,11 @@ body {
     .navbar-brand {
         font-size: 2rem;
     }
-		html .result-message {
+		.result-message {
 			font-size: 20px;
+		}
+		.footer {
+			font-size: 5px;
 		}
 }
 
@@ -191,7 +198,7 @@ h4 {
     font-size: 1.3rem;
     line-height: 1.53;
     text-align: center;
-    color: #286cc5;
+    color: #f15f5f;
     margin: 0 auto;
 }
 
@@ -202,8 +209,8 @@ img {
 
 .try-again-btn {
 	border-radius: 15px;
-	background-color: #416dea;
-	border-color: #416dea;
+	background-color: #f17f7f;
+	border-color: #f17f7f;
 	width: 40%;
 	height: 40px;
 }
@@ -683,4 +690,5 @@ p {
 }
 .footer {
 	padding-top: 30%; 
+	text-align: center;
 }
