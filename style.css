@@ -149,6 +149,9 @@ body {
     margin-bottom: 50px;
     text-align: center;
 }
+.section #logo {
+    opacity: 1;
+}
 
 .title {
     font-weight: bold;
