@@ -159,6 +159,7 @@ body {
 
 .title {
     font-weight: bold;
+		font-size: 3rem;
     line-height: 1.0;
     text-align: center;
     color: #35465d;
@@ -167,7 +168,7 @@ body {
 .subtitle {
     line-height: 1.53;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: #35465d;
 }
 
@@ -185,7 +186,7 @@ body {
 			font-size: 20px;
 		}
 		.footer {
-			font-size: 5px;
+			font-size: 20px;
 		}
 }
 
