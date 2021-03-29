@@ -116,15 +116,15 @@
                 <!-- </div> -->
                 <div class="b-skills">
                     <div class="container-fluid">
-                        <div id="graph" class="row">
+                        <div id="label-container" class="row">
 
                         </div>
                     </div>
                 </div>
                 <!-- <div class="modal-footer d-flex justify-content-center"> -->
-                    <button type="button p-2" class="try-again-btn">
-                        <span class="try-again-text">다른 사진으로 재시도</span>
-                    </button>
+								<button type="button p-2" class="try-again-btn" onclick="window.location.reload()">
+									<span class="try-again-text">다른 사진으로 재시도</span>
+								</button>
                 <!-- </div> -->
                 <div id="addThis" class="addthis_inline_share_toolbox mt-8"></div>
             </div>
@@ -211,12 +211,12 @@
                 maxPredictions = model.getTotalClasses();
 
                 // labelContainer = document.getElementById('label-container');
-                graphContainer = document.getElementById("graph");
+                labelContainer = document.getElementById("label-container");
                 for (let i = 0; i < maxPredictions; i++) {
                     // and class labels
                     var element = document.createElement("div")
                     element.classList.add("col-xs-12", "col-sm-4", "col-md-3");
-                    graphContainer.appendChild(element);
+                    labelContainer.appendChild(element);
                 }
             }
 
@@ -230,6 +230,7 @@
                     (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
                 );
                 console.log(prediction[0].className);
+								console.log(prediction[1].className);
                 var resultTitle, resultExplain, resultCeleb;
                 switch (prediction[0].className) {
                     case 'maltiz':
@@ -325,7 +326,7 @@
                 var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
                 $('.result-message').html(title + explain + celeb);
 
-                for (let i = 0; i < maxPredictions; i++) {
+                for (let i = 0; i < 5; i++) {
                     var labelTitle;
                     switch (prediction[i].className) {
                         case 'maltiz':
@@ -422,13 +423,15 @@
 
 
                     });
-
-                    if (prediction[i].probability.toFixed(2) != 0) {
-                        var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + Math.round(prediction[i].probability.toFixed(2)) * 100 + '"data-bar-color="#9b6b43"><span class="percent" data-after="%">' + prediction[i].probability.toFixed(2) * 100 + '</span></div></div><p>' + labelTitle + '</p></div>';
-                        graphContainer.childNodes[i].innerHTML = showPercent;
-                    }
+										
+                    
+											var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + Math.round(prediction[i].probability.toFixed(2)) * 100 + '"data-bar-color="#9b6b43"><span class="percent" data-after="%">' + prediction[i].probability.toFixed(2) * 100 + '</span></div></div><p>' + labelTitle + '</p></div>';
+											labelContainer.childNodes[i].innerHTML = showPercent;
+											
+									
+										
                 }
-
+							console.log(prediction[0])
             }
         </script>
     </div>
