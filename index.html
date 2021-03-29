@@ -115,17 +115,17 @@
                 <!-- <div id="label-container" class="d-flex flex-column justify-content-around"> -->
                 <!-- </div> -->
                 <div class="b-skills">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div id="graph" class="row">
 
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-center">
+                <!-- <div class="modal-footer d-flex justify-content-center"> -->
                     <button type="button p-2" class="try-again-btn">
                         <span class="try-again-text">다른 사진으로 재시도</span>
                     </button>
-                </div>
+                <!-- </div> -->
                 <div id="addThis" class="addthis_inline_share_toolbox mt-8"></div>
             </div>
 
@@ -215,7 +215,7 @@
                 for (let i = 0; i < maxPredictions; i++) {
                     // and class labels
                     var element = document.createElement("div")
-                    element.classList.add("col-xs-12", "col-sm-6", "col-md-3");
+                    element.classList.add("col-xs-12", "col-sm-4", "col-md-3");
                     graphContainer.appendChild(element);
                 }
             }
