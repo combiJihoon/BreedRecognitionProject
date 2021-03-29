@@ -200,6 +200,18 @@ img {
     height: 20%;
 }
 
+.try-again-btn {
+	border-radius: 15px;
+	background-color: #416dea;
+	border-color: #416dea;
+	width: 40%;
+	height: 40px;
+}
+
+.try-again-text {
+	color: #fffff0;
+}
+
 #addThis {
     margin-top: 50px;
 }
