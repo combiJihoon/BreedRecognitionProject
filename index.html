@@ -2,27 +2,26 @@
 <html>
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- Bootstrap CSS -->
-	<link href='https://fonts.googleapis.com/css?family=Nanum Gothic Coding' rel='stylesheet'>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-	 crossorigin="anonymous" />
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6059b570b08a08b8">
-
-	</script>
-	<title>나와 닮은 강아지는?</title>
+    <!-- Bootstrap CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Nanum Gothic Coding' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6059b570b08a08b8">
+    </script> -->
+    <title>나와 닮은 강아지는?</title>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light nv-distance">
-		<div class="container-fluid">
-			<!-- <a class="navbar-brand" href="#">AI가 분석하는 닮은 견종 찾기!</a> -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <nav class="navbar navbar-expand-lg navbar-light nv-distance">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">AI가 분석하는 닮은 견종 찾기!</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,18 +65,18 @@
     </nav>
     <section class="section">
         <h1 class="title">닮은 강아지 찾아요!</h1>
-        <h2 class="mt-5 subtitle">말티즈, 푸들, 치와와 등 나와 가장 닮은 품종은?</h2>
+        <h2 class="mt-5 subtitle">말티즈, 푸들, 치와와 등 <br>나와 가장 닮은 견종은 뭘까?</h2>
     </section>
-
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/path/to/jquery.easy-pie-chart.js"></script>
+    <!-- <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
     <div class="container file-upload">
         <div class="image-upload-wrap">
             <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
                 <img src="assets/Upload.svg" class="mt-3 upload" />
                 <h3 class="mb-3 pb-3 pt-3 upload-text">
-                    사진을 올려놓거나<br />
-                    눌러서 업로드하세요
+                    사진을 올려놓거나<br /> 눌러서 업로드하세요
                 </h3>
             </div>
         </div>
@@ -92,13 +91,13 @@
         </div> -->
         <div class="file-upload-content">
             <img class="file-upload-image" id="animal-image" src="#" alt="your image" />
-            <div class="loader ">
+            <div class="loader">
                 <div id="loading" class="loader-inner loading" style="display: none;">
                     <div class="loading-box">
                         <div class="circular-loader">
                         </div>
                         <div class="loader-message">AI가 분석 중이예요!</div>
-                    </div>		
+                    </div>
                 </div>
 
                 <!-- <div id="loading" class="animated bounce" style="display: none;">
@@ -108,16 +107,26 @@
                         <p class="text-center">AI가 당신의 품종을 분석중입니다.</p>
                     </div> -->
 
-						<p class="result-message"></p>
-						<div id="label-container" class="d-flex flex-column justify-content-around"></div>
-						
-						<div class="pt-3 image-title-wrap">
-								<button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
-										<span class="try-again-text">다른 사진으로 재시도</span>
-								</button>
-						</div>
-						<div id="addThis" class="addthis_inline_share_toolbox mt-8"></div>
-				</div>
+                <p class="result-message"></p>
+                <!-- <div id="label-container" class="d-flex flex-column justify-content-around" style="display: none;">
+                    
+                </div> -->
+                <!-- <div id="label-container" class="d-flex flex-column justify-content-around"> -->
+                <!-- </div> -->
+                <div class="b-skills">
+                    <div class="container">
+                        <div id="graph" class="row">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button p-2" class="try-again-btn">
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>
+                </div>
+                <div id="addThis" class="addthis_inline_share_toolbox mt-8"></div>
+            </div>
 
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
         </div>
@@ -137,7 +146,7 @@
 
                     reader.onload = function (e) {
                         $('.image-upload-wrap').hide();
-												$('#loading').show();
+                        $('#loading').show();
                         $('.file-upload-image').attr('src', e.target.result);
                         $('.file-upload-content').show();
                         $('.image-title').html(input.files[0].name);
@@ -169,8 +178,16 @@
             $('.image-upload-wrap').bind('dragleave', function () {
                 $('.image-upload-wrap').removeClass('image-dropping');
             });
+
+
+            //
         </script>
+
+        <script src="plugins/jquery-2.2.4.min.js"></script>
+        <script src="plugins/jquery.appear.min.js"></script>
+        <script src="plugins/jquery.easypiechart.min.js"></script>
         <script type="text/javascript">
+            'use strict ';
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
@@ -191,10 +208,13 @@
                 model = await tmImage.load(modelURL, metadataURL);
                 maxPredictions = model.getTotalClasses();
 
-                labelContainer = document.getElementById('label-container');
+                // labelContainer = document.getElementById('label-container');
+                graphContainer = document.getElementById("graph");
                 for (let i = 0; i < maxPredictions; i++) {
                     // and class labels
-                    labelContainer.appendChild(document.createElement('div'));
+                    var element = document.createElement("div")
+                    element.classList.add("col-xs-12", "col-sm-6", "col-md-3");
+                    graphContainer.appendChild(element);
                 }
             }
 
@@ -208,81 +228,217 @@
                     (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
                 );
                 console.log(prediction[0].className);
-                var resultMessage;
+                var resultTitle, resultExplain, resultCeleb;
                 switch (prediction[0].className) {
-                    case '말티즈':
-                        resultMessage = '말티즈';
+                    case 'maltiz':
+                        resultTitle = '말티즈';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '비숑':
-                        resultMessage = '비숑';
+                    case 'bishong':
+                        resultTitle = '비숑';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '불독':
-                        resultMessage = '불독';
+                    case 'bulldog':
+                        resultTitle = '불독';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '시바견':
-                        resultMessage = '시바견';
+                    case 'sibagyeon':
+                        resultTitle = '시바견';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '시츄':
-                        resultMessage = '시츄';
+                    case 'sichu':
+                        resultTitle = '시츄';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '요크셔':
-                        resultMessage = '요크셔';
+                    case 'yokshir':
+                        resultTitle = '요크셔';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '치와와':
-                        resultMessage = '치와와';
+                    case 'chiwawa':
+                        resultTitle = '치와와';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '푸들':
-                        resultMessage = '푸들';
+                    case 'poodle':
+                        resultTitle = '푸들';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '허스키':
-                        resultMessage = '허스키';
+                    case 'huskey':
+                        resultTitle = '허스키';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '진돗개':
-                        resultMessage = '진돗개';
+                    case 'jindo':
+                        resultTitle = '진돗개';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '리트리버':
-                        resultMessage = '리트리버';
+                    case 'retriever':
+                        resultTitle = '리트리버';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '보더콜리':
-                        resultMessage = '보더콜리';
+                    case 'bordercollie':
+                        resultTitle = '보더콜리';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '닥스훈트':
-                        resultMessage = '닥스훈트';
+                    case 'dachshund':
+                        resultTitle = '닥스훈트';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-                    case '포메라니안':
-                        resultMessage = '포메라니안';
+                    case 'pomeranian':
+                        resultTitle = '포메라니안';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-										case '사모예드':
-                        resultMessage = '사모예드';
+                    case 'samoyed':
+                        resultTitle = '사모예드';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-										case '불테리어':
-                        resultMessage = '불테리어';
+                    case 'bullterrier':
+                        resultTitle = '불테리어';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
-										case '차우차우':
-                        resultMessage = '불테리어';
+                    case 'chowchow':
+                        resultTitle = '차우차우';
+                        resultExplain = '어쩌구저쩌구';
+                        resultCeleb = '어쩌구저쩌구';
                         break;
                     default:
                         resultMessage = '앗! 다른 사진으로 시도해 보세요!';
                 }
-                $('.result-message').html(resultMessage);
+                var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
+                var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+                var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                $('.result-message').html(title + explain + celeb);
+
                 for (let i = 0; i < maxPredictions; i++) {
-									const classPrediction =
-											prediction[i].className +
-											': ' +
-											prediction[i].probability.toFixed(2);
-											if (prediction[i].probability.toFixed(2)!=0) {
-												labelContainer.childNodes[i].innerHTML = classPrediction;
-											}
+                    var labelTitle;
+                    switch (prediction[i].className) {
+                        case 'maltiz':
+                            labelTitle = '말티즈';
+                            break;
+                        case 'bishong':
+                            labelTitle = '비숑';
+                            break;
+                        case 'bulldog':
+                            labelTitle = '불독';
+                            break;
+                        case 'sibagyeon':
+                            labelTitle = '시바견';
+                            break;
+                        case 'sichu':
+                            labelTitle = '시츄';
+                            break;
+                        case 'yokshir':
+                            resultTitle = '요크셔';
+                            break;
+                        case 'chiwawa':
+                            labelTitle = '치와와';
+                            break;
+                        case 'poodle':
+                            labelTitle = '푸들';
+                            break;
+                        case 'huskey':
+                            labelTitle = '허스키';
+                            break;
+                        case 'jindo':
+                            labelTitle = '진돗개';
+                            break;
+                        case 'retriever':
+                            labelTitle = '리트리버';
+                            break;
+                        case 'bordercollie':
+                            labelTitle = '보더콜리';
+                            break;
+                        case 'dachshund':
+                            labelTitle = '닥스훈트';
+                        case 'pomeranian':
+                            labelTitle = '포메라니안';
+                            break;
+                        case 'samoyed':
+                            labelTitle = '사모예드';
+                            break;
+                        case 'bullterrier':
+                            labelTitle = '불테리어';
+                            break;
+                        case 'chowchow':
+                            labelTitle = '차우차우';
+                            break;
+                    }
+                    // horizontal aligning : d-flex flex-row
+                    var $window = $(window);
+
+                    function run() {
+                        var fName = arguments[0],
+                            aArgs = Array.prototype.slice.call(arguments, 1);
+                        try {
+                            fName.apply(window, aArgs);
+                        } catch (err) {
+
+                        }
+                    };
+
+                    /* chart
+                    ================================================== */
+                    function _chart() {
+                        $('.b-skills').appear(function () {
+                            setTimeout(function () {
+                                $('.chart').easyPieChart({
+                                    easing: 'easeOutElastic',
+                                    delay: 3000,
+                                    barColor: '#369670',
+                                    trackColor: '#fff',
+                                    scaleColor: false,
+                                    lineWidth: 21,
+                                    trackWidth: 21,
+                                    size: 250,
+                                    lineCap: 'round',
+                                    onStep: function (from, to, percent) {
+                                        this.el.children[0].innerHTML = Math.round(percent);
+                                    }
+                                });
+                            }, 150);
+                        });
+                    };
+
+
+                    $(document).ready(function () {
+
+                        run(_chart);
+
+
+                    });
+
+                    if (prediction[i].probability.toFixed(2) != 0) {
+                        var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + Math.round(prediction[i].probability.toFixed(2)) * 100 + '"data-bar-color="#9b6b43"><span class="percent" data-after="%">' + prediction[i].probability.toFixed(2) * 100 + '</span></div></div><p>' + labelTitle + '</p></div>';
+                        graphContainer.childNodes[i].innerHTML = showPercent;
+                    }
                 }
+
             }
         </script>
 </body>
-<!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR) // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the
+Software // without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+following conditions: // // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE WARRANTIES // OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+OR OTHERWISE, ARISING FROM, OUT OF // OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<!-- Copyright (c) 2021 by Brijesh (https://codepen.io/aubrijesh/pen/MvNeyg) // Permission is hereby granted, free of charge, to any
+person obtaining a copy of this software // and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons // to whom the Software is furnished to do so, subject to the following conditions: // The above copyright notice and this permission notice shall be included in all copies or substantial portions of
+the Software. // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT // WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
 </html>
