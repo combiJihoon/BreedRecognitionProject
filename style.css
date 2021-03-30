@@ -175,6 +175,7 @@ body {
 
 /* On screens that are 600px or less, set the background color to olive */
 
+/* pie chart grid를 4개 배열 가능하도록 바꿔야 함 -> 아예 class이름을 바꿔야 할 듯 */
 @media screen and (max-width: 600px) {
     html {
         font-size: 10px;
@@ -692,4 +693,8 @@ p {
 .footer {
 	padding-top: 30%; 
 	text-align: center;
+}
+
+.zero-message {
+	font-size: 40px;
 }
