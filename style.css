@@ -189,9 +189,15 @@ body {
 		.footer {
 			font-size: 1.2rem;
 		}
-		/* .container {
-			grid-template-columns: 20% auto;
-		} */
+		.container {
+			width: 60%;
+		}
+		.percent {
+			font-size: 20px;
+		}
+		.skill-item {
+			font-size: 14px;
+		}
 }
 
 h4 {
