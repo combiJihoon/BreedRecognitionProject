@@ -1,5 +1,6 @@
 body {
-    font-family: 'Nanum Gothic Coding';
+    /* font-family: 'Nanum Gothic Coding'; */
+		font-family: 'Do Hyeon', 'sans-serif';
     background-color: #fffff0;
 }
 
@@ -313,7 +314,7 @@ body {
 
 .loader .loader-inner .loading-box .loader-message {
     padding: 1em 0;
-    color: white;
+    color: #444;
 		font-size: 1.5rem;
 }
 
