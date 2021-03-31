@@ -216,7 +216,7 @@
                 for (let i = 0; i < maxPredictions; i++) {
                     // and class labels
                     var element = document.createElement("div")
-                    element.classList.add("col-xs-6", "col-sm-6", "col-md-3");
+                    element.classList.add("col-6", "col-xs-6", "col-sm-6", "col-md-3");
                     labelContainer.appendChild(element);
                 }
             }
@@ -433,7 +433,7 @@
                     console.log(prediction[i].probability.toFixed(2) * 100)
                     zeroContainer = document.getElementById("zero-message");
                     if (prediction[1].probability.toFixed(2) * 100 <= 1) {
-                        var zeroMessage = '<div class="zero-message">어머!' + prediction[0].className + '하고 똑같이 생기셨나 봐요!</div>'
+                        var zeroMessage = '<div class="zero-message">어머!' + resultTitle + '하고 똑같이 생기셨네요!</div>'
                         $('.zero-message').html(zeroMessage);
                         break;
                         // zeroContainer.childNodes[i].innerHTML = zeroMessage;

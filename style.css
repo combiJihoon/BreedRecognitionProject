@@ -178,7 +178,7 @@ body {
 /* pie chart grid를 4개 배열 가능하도록 바꿔야 함 -> 아예 class이름을 바꿔야 할 듯 */
 @media screen and (max-width: 600px) {
     html {
-        font-size: 10px;
+      font-size: 10px;
     }
     .navbar-brand {
         font-size: 2rem;
@@ -196,6 +196,12 @@ body {
 			font-size: 20px;
 		}
 		.skill-item {
+			font-size: 14px;
+		}
+		.try-again-btn {
+			width: 50%;
+		}
+		.try-again-btn .try-again-text {
 			font-size: 14px;
 		}
 }
@@ -222,12 +228,13 @@ img {
 	border-radius: 15px;
 	background-color: #f17f7f;
 	border-color: #f17f7f;
-	width: 40%;
-	height: 40px;
+	width: 48%;
+	height: 50px;
 }
 
 .try-again-text {
 	color: #fffff0;
+	font-size: 20px;
 }
 
 #addThis {
