@@ -192,11 +192,14 @@ body {
 		/* .container {
 			width: 60%;
 		} */
-		.percent {
-			font-size: 20px;
+		/* .label-container .percent {
+			font-size: 5rem;
+		} */
+		.b-skills .skill-item {
+			font-size: 2rem;
 		}
-		.skill-item {
-			font-size: 14px;
+		.skill-item .percent {
+			font-size: 4rem;
 		}
 		.try-again-btn .try-again-text {
 			font-size: 14px;
@@ -646,7 +649,7 @@ body {
 
 .b-skills h2 {
     margin-bottom: 50px;
-    font-weight: 900;
+    font-weight: 980;
     text-transform: uppercase;
 }
 
@@ -656,6 +659,7 @@ body {
     width: 100%;
     margin-bottom: 30px;
     color: #555;
+		font-size: 1.5rem;
 }
 
 .chart-container {
@@ -690,14 +694,14 @@ body {
 .skill-item .percent {
     position: relative;
     line-height: 1;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 900;
     z-index: 2;
 }
 
 .skill-item .percent:after {
     content: attr(data-after);
-    font-size: 20px;
+    font-size: 30px;
 }
 
 p {

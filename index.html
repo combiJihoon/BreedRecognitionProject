@@ -337,54 +337,71 @@
                     switch (prediction[i].className) {
                         case 'maltiz':
                             labelTitle = '말티즈';
+														labelColor = '#84FB84';
                             break;
                         case 'bishong':
                             labelTitle = '비숑';
+														labelColor = '#52E4DC';
                             break;
                         case 'bulldog':
                             labelTitle = '불독';
+														labelColor = '#28B4B4';
                             break;
                         case 'sibagyeon':
                             labelTitle = '시바견';
+														labelColor = '#FF8C0A';
                             break;
                         case 'sichu':
                             labelTitle = '시츄';
+														labelColor = '#FF98A3';
                             break;
                         case 'yokshir':
                             labelTitle = '요크셔';
+														labelColor = '#FF4646';
                             break;
                         case 'chiwawa':
                             labelTitle = '치와와';
+														labelColor = '#FFD732';
                             break;
                         case 'poodle':
                             labelTitle = '푸들';
+														labelColor = '#FF73BE';
                             break;
                         case 'huskey':
                             labelTitle = '허스키';
+														labelColor = '#A30FE2';
                             break;
                         case 'jindo':
                             labelTitle = '진돗개';
+														labelColor = '#c646c6';
                             break;
                         case 'retriever':
                             labelTitle = '리트리버';
+														labelColor = '#FF96FF';
                             break;
                         case 'bordercollie':
                             labelTitle = '보더콜리';
+														labelColor = '#C73399';
                             break;
                         case 'dachshund':
                             labelTitle = '닥스훈트';
+														labelColor = '#FF8200';
 														break;
                         case 'pomeranian':
                             labelTitle = '포메라니안';
+														labelColor = '#FF5050';
                             break;
                         case 'samoyed':
                             labelTitle = '사모예드';
+														labelColor = '#4646CD';
                             break;
                         case 'bullterrier':
                             labelTitle = '불테리어';
+														labelColor = '#FF9E7D';
                             break;
                         case 'chowchow':
                             labelTitle = '차우차우';
+														labelColor = '#5A78AF';
                             break;
                     }
                     // horizontal aligning : d-flex flex-row
@@ -412,9 +429,9 @@
                                     barColor: '#369670',
                                     trackColor: '#fff',
                                     scaleColor: false,
-                                    lineWidth: 21,
-                                    trackWidth: 21,
-                                    size: 250,
+                                    lineWidth: 10,
+                                    trackWidth: 10,
+                                    size: 100,
                                     lineCap: 'round',
                                     onStep: function (from, to, percent) {
                                         this.el.children[0].innerHTML = Math.round(percent);
@@ -440,7 +457,7 @@
                     }
                     else {
                         if (i < 5) {
-                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + prediction[i].probability.toFixed(3) * 100 + '"data-bar-color="#9b6b43"><span class="percent" data-after="%">' + prediction[i].probability.toFixed(3) * 100 + '</span></div></div><p>' + labelTitle + '</p></div>';
+                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + prediction[i].probability.toFixed(3) * 100 + '"data-bar-color="'+labelColor+'"><span class="percent" data-after=" %">' + prediction[i].probability.toFixed(3) * 100 + '</span></div></div><p>' + labelTitle + '</p></div>';
                             labelContainer.childNodes[i].innerHTML = showPercent;
                         }
 
