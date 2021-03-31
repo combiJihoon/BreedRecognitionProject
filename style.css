@@ -335,14 +335,14 @@ body {
 }
 
 .loader .loader-inner .loading-box .circular-loader {
-    border: 3px solid #f3f3f3;
+    border: 3px solid #444;
     /* Light grey */
-    border-top: 3px solid #444;
+    border-top: 3px solid #f3f3f3;
     /* Blue */
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 2s linear infinite;
+    animation: spin 1.5s linear infinite;
     margin: 0 auto;
     transition: all .5s ease-out;
     position: relative;
@@ -563,87 +563,104 @@ body {
 
 .maltiz-title {
     color: #84FB84;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .bishong-title {
     color: #52E4DC;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .bulldog-title {
     color: #28B4B4;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .sibagyeon-title {
     color: #FF8C0A;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .sichu-title {
     color: #FF98A3;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .yokshir-title {
     color: #FF4646;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .chiwawa-title {
     color: #FFD732;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .poodle-title {
     color: #FF73BE;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .huskey-title {
     color: #A30FE2;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .jindo-title {
     color: #c646c6;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .retriever-title {
     color: #FF96FF;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .bordercollie-title {
     color: #C73399;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .dachshund-title {
     color: #FF8200;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .pomeranian-title {
     color: #FF5050;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .samoyed-title {
     color: #4646CD;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .bullterrier-title {
     color: #FF9E7D;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 .chowchow-title {
     color: #5A78AF;
-    font-size: 3rem;
+    font-size: 4rem;
+		font-weight: bold;
 }
 
 /* .b-skills {
