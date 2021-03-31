@@ -203,7 +203,7 @@ body {
 			font-size: 4rem;
 		}
 		.try-again-btn .try-again-text {
-			font-size: 14px;
+			font-size: 20px;
 		}
 }
 
@@ -230,12 +230,12 @@ img {
 	background-color: #f17f7f;
 	border-color: #f17f7f;
 	width: 50%;
-	height: 50px;
+	height: 60px;
 }
 
 .try-again-text {
 	color: #fffff0;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 #addThis {
