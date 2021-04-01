@@ -454,7 +454,7 @@
 
 
                     });
-                    console.log(prediction[i].probability.toFixed(2) * 100)
+										
                     zeroContainer = document.getElementById("zero-message");
                     if (prediction[1].probability.toFixed(2) * 100 <= 1) {
                         var zeroMessage = '<div class="zero-message">어머!' + resultTitle + '하고 똑같이 생기셨네요!</div>'
@@ -464,10 +464,12 @@
                     }
                     else {
                         if (i < 5) {
-                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + prediction[i].probability.toFixed(3) * 100 + '"data-bar-color="'+labelColor+'"><span class="percent" data-after=" %">' + prediction[i].probability.toFixed(3) * 100 + '</span></div></div><p>' + labelTitle + '</p></div>';
+														var predictProb = Math.round(prediction[i].probability.toFixed(3) * 100)
+														var zeroController = (predictProb == 0) ? "1" : (predictProb)
+                    				console.log(prediction[i].probability.toFixed(2) * 100)
+                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="'+labelColor+'"><span class="percent" data-after=" %">' + zeroController + '</span></div></div><p>' + labelTitle + '</p></div>';
                             labelContainer.childNodes[i].innerHTML = showPercent;
                         }
-
                     }
                 }
             }
@@ -475,7 +477,7 @@
     </div>
     <footer class="footer container d-flex justify-content-center">
         <div>
-            <p>이 앱은 개발자 combi_areum, 유튜버 조코딩님의 도움을 받아 제작 되었습니다.</p>
+            <p>이 앱은 개발자 아르미, 유튜버 조코딩님의 도움을 받아 제작 되었습니다.</p>
             <p>&copy; 김지훈 2021. All Rights Reserved.</p>
         </div>
     </footer>
