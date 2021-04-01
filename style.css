@@ -205,6 +205,10 @@ body {
 		.try-again-btn .try-again-text {
 			font-size: 20px;
 		}
+		.try-again-btn .try-again-text:hover {
+			color: #586ff0;
+			font-size: 20px;
+		}
 }
 
 h4 {
@@ -237,11 +241,14 @@ img {
 	color: #fffff0;
 	font-size: 25px;
 }
+.try-again-text:hover {
+	color: #586ff0;
+	font-size: 25px;
+}
 
 #addThis {
     margin-top: 50px;
 }
-
 
 
 /* addthis_inline_share_toolbox {
