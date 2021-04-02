@@ -92,8 +92,11 @@
             </div>
         </div> -->
         <div id = "img-container" class="file-upload-content">
-            <img class="file-upload-image" id="animal-image" onchange="changeImage(this);" src="#" alt="your image" / >
+						<!-- result-image src에 question mark 넣고 일단 hide 후 predict 후에 show -->
+	<!-- class="file-upload-image" -->
             <div class="loader">
+								<img class="file-upload-image" id="animal-image" src="#" alt="your image" / >
+								<img id="result-image" src="assets/question_mark.svg" alt="your image" / style="display: none;">
                 <div id="loading" class="loader-inner loading" style="display: none;">
                     <div class="loading-box">
                         <div class="circular-loader">
@@ -165,6 +168,7 @@
                         console.log('hello');
                         predict();
 												// 여기에 src 변경해서 띄울 수 있는 방법 생각해 보기!
+												$('#result-image').show();
                         $('#loading').hide();
                     });
                     // 모델을 불러오는 데 시간이 조금 걸림 -> 따라서 모델 불러오는 동안 predict가 실행되어서는 안됨
@@ -350,7 +354,7 @@
 									var imgfilename = "assets/results/"+prediction[0].className+"-result.jpeg";
 
 									// Set your file name
-									$('#animal-image').attr('src', imgfilename);
+									$('#result-image').attr('src', imgfilename);
 								});
 
                 for (let i = 1; i < maxPredictions; i++) {
