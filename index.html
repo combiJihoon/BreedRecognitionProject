@@ -129,7 +129,7 @@
 								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6059b570b08a08b8"></script>
 
 								<p class="otherresult-message"></p>
-                <p class="zero-message"></p>
+                <p id="zero-result" class="zero-container"></p>
 
                 <div class="b-skills">
                     <div class="container">
@@ -479,10 +479,10 @@
                     });
 										
 
-										zeroContainer =  document.getElementById("zero-message");
+										zeroContainer =  document.getElementById("zero-result");
                     if (prediction[1].probability.toFixed(2) * 100 <= 1) {
-                        var zeroMessage = '<div class="zero-message">어머!' + resultTitle + '하고 똑같이 생기셨네요!</div>'
-                        $('.zero-message').html(zeroMessage);
+                        var zeroMessage = '<div class="zero-message">어머!<br>' + resultTitle + '하고 똑같이 생기셨네요!</div>'
+                        $('.zero-container').html(zeroMessage);
                         break;
                         // zeroContainer.childNodes[i].innerHTML = zeroMessage;
                     }

@@ -184,9 +184,22 @@ body {
     .navbar-brand {
         font-size: 2rem;
     }
-		.result-message {
+		/* .result-message {
 			font-size: 20px;
+		} */
+
+		.result-message .animal-percentage {
+			font-size: 30px;
 		}
+
+		.result-message .animal-explain {
+			font-size: 25px;
+		}
+
+		#zero-result .zero-message {
+			font-size: 25px;
+		}
+
 		.footer {
 			font-size: 1.2rem;
 		}
@@ -208,6 +221,9 @@ body {
 		.try-again-btn .try-again-text:hover {
 			color: #586ff0;
 			font-size: 20px;
+		}
+		.otherresult-message .other-breed {
+			font-size: 18px;
 		}
 }
 
@@ -251,6 +267,10 @@ img {
 		width: 60%;
 }
 
+.other-breed {
+	font-size: 25px;
+}
+
 
 /* addthis_inline_share_toolbox {
   align-content: center;
@@ -261,6 +281,16 @@ img {
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
+.animal-percentage {
+	font-size: 35px;
+}
+
+.animal-explain {
+	font-size: 30px;
+}
+
+
 
 .label-container {
     font-size: 20;
@@ -748,7 +778,7 @@ p {
 	text-align: center;
 }
 
-.zero-message {
-	font-size: 40px;
+.zero-container .zero-message {
+	font-size: 30px;
 }
 
