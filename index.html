@@ -347,7 +347,7 @@
                 var others = "<div class='other-breed mt-5 mb-5'>" + otherMessage + "</div>"
 								var division = "<hr class='division-line mb-5'>"
                 var title = "<div class='" + prediction[0].className + "-title'>" + resultTitle + "</div>"
-                var percentage = "<div class='animal-percentage pt-2'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
+                var percentage = "<div class='animal-percentage "+prediction[0].className+"-chartText pt-2'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
                 var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
                 var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
 								
@@ -391,7 +391,7 @@
                             break;
                         case 'chiwawa':
                             labelTitle = '치와와';
-														labelColor = '#FFD732';
+														labelColor = '#FF7F50';
                             break;
                         case 'poodle':
                             labelTitle = '푸들';

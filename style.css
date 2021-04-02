@@ -218,10 +218,6 @@ body {
 		.try-again-btn .try-again-text {
 			font-size: 20px;
 		}
-		.try-again-btn .try-again-text:hover {
-			color: #586ff0;
-			font-size: 20px;
-		}
 		.otherresult-message .other-breed {
 			font-size: 18px;
 		}
@@ -253,12 +249,12 @@ img {
 	height: 60px;
 }
 
+.try-again-btn:hover {
+	opacity: 0.9;
+}
+
 .try-again-text {
 	color: #fffff0;
-	font-size: 25px;
-}
-.try-again-text:hover {
-	color: #586ff0;
 	font-size: 25px;
 }
 
@@ -625,7 +621,7 @@ body {
 }
 
 .chiwawa-chartText {
-    color: #FFD732;
+    color: #FF7F50;
 }
 
 .poodle-chartText {
@@ -708,7 +704,7 @@ body {
 }
 
 .chiwawa-title {
-    color: #FFD732;
+    color: #FF7F50;
     font-size: 4rem;
 		font-weight: bold;
 }
