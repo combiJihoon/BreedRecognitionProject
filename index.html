@@ -91,8 +91,8 @@
 								</button>
             </div>
         </div> -->
-        <div class="file-upload-content">
-            <img class="file-upload-image" id="animal-image" src="#" alt="your image" />
+        <div id = "img-container" class="file-upload-content">
+            <img class="file-upload-image" id="animal-image" onchange="changeImage(this);" src="#" alt="your image" / >
             <div class="loader">
                 <div id="loading" class="loader-inner loading" style="display: none;">
                     <div class="loading-box">
@@ -164,6 +164,7 @@
                     init().then(() => {
                         console.log('hello');
                         predict();
+												// 여기에 src 변경해서 띄울 수 있는 방법 생각해 보기!
                         $('#loading').hide();
                     });
                     // 모델을 불러오는 데 시간이 조금 걸림 -> 따라서 모델 불러오는 동안 predict가 실행되어서는 안됨
@@ -236,7 +237,11 @@
                     (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
                 );
                 // console.log(prediction[0].className);
-                console.log(prediction);
+                console.log(prediction[0].className);
+								
+								// imgContainer = document.getElementById("img-container");
+								// var resultUpload = '<img class="result-image" id="result-image" src="assets/'+prediction[0].className+'-result.jpeg" alt="your image" />'
+								// imgContainer.childNodes[0].innerHTML = resultUpload;
 
                 var resultTitle, resultExplain, resultCeleb, resultPercent;
                 var otherMessage = '나와 닮은 다른 견종은 뭐가 있을까?';
@@ -336,8 +341,17 @@
                 var percentage = "<div class='animal-percentage pt-2'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
                 var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
                 var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+								
                 $('.result-message').html(title + percentage + explain + celeb);
 								$('.otherresult-message').html(others + division);
+
+								$(function(){
+										// Get your file name here
+									var imgfilename = "assets/results/"+prediction[0].className+"-result.jpeg";
+
+									// Set your file name
+									$('#animal-image').attr('src', imgfilename);
+								});
 
                 for (let i = 1; i < maxPredictions; i++) {
                     var labelTitle;
@@ -455,7 +469,8 @@
 
                     });
 										
-                    zeroContainer = document.getElementById("zero-message");
+
+										zeroContainer =  document.getElementById("zero-message");
                     if (prediction[1].probability.toFixed(2) * 100 <= 1) {
                         var zeroMessage = '<div class="zero-message">어머!' + resultTitle + '하고 똑같이 생기셨네요!</div>'
                         $('.zero-message').html(zeroMessage);
@@ -473,6 +488,7 @@
                     }
                 }
             }
+
         </script>
     </div>
     <footer class="footer container d-flex justify-content-center">
