@@ -491,7 +491,7 @@
 														var predictProb = Math.round(prediction[i].probability.toFixed(3) * 100)
 														var zeroController = (predictProb == 0) ? "1" : (predictProb)
                     				console.log(prediction[i].probability.toFixed(2) * 100)
-                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="'+labelColor+'"><span class="percent" data-after=" %">' + zeroController + '</span></div></div><p class="'+prediction[i].className+'-chartText">' + labelTitle + '</p></div>';
+                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="'+labelColor+'"><span class="percent '+prediction[i].className+'-chartText" data-after=" %">' + zeroController + '</span></div></div><p class="'+prediction[i].className+'-chartText">' + labelTitle + '</p></div>';
                             labelContainer.childNodes[i].innerHTML = showPercent;
                         }
                     }
