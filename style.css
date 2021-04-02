@@ -598,6 +598,77 @@ body {
 } */
 
 
+/* chartText */
+
+.maltiz-chartText {
+    color: #84FB84;
+}
+
+.bishong-chartText {
+    color: #52E4DC;
+}
+
+.bulldog-chartText {
+    color: #28B4B4;
+}
+
+.sibagyeon-chartText {
+    color: #FF8C0A;
+}
+
+.sichu-chartText {
+    color: #FF98A3;
+}
+
+.yokshir-chartText {
+    color: #FF4646;
+}
+
+.chiwawa-chartText {
+    color: #FFD732;
+}
+
+.poodle-chartText {
+    color: #FF73BE;
+}
+
+.huskey-chartText {
+    color: #A30FE2;
+}
+
+.jindo-chartText {
+    color: #c646c6;
+}
+
+.retriever-chartText {
+    color: #FF96FF;
+}
+
+.bordercollie-chartText {
+    color: #C73399;
+}
+
+.dachshund-chartText {
+    color: #FF8200;
+}
+
+.pomeranian-chartText {
+    color: #FF5050;
+}
+
+.samoyed-chartText {
+    color: #4646CD;
+}
+
+.bullterrier-chartText {
+    color: #FF9E7D;
+}
+
+.chowchow-chartText {
+    color: #5A78AF;
+}
+
+
 /* title */
 
 .maltiz-title {
