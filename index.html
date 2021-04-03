@@ -253,106 +253,88 @@
 								// imgContainer.childNodes[0].innerHTML = resultUpload;
 
                 var resultTitle, resultExplain, resultCeleb, resultPercent;
-                var otherMessage = '나와 닮은 다른 견종은 뭐가 있을까?';
+                // var otherMessage = '나와 닮은 다른 견종은 뭐가 있을까?';
                 switch (prediction[0].className) {
                     case 'maltiz':
                         resultTitle = '말티즈';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
-                        // resultPrecent = Math.round(prediction[i].toFixed(2))*100
+                        resultExplain = '말티즈는 참지 않긔~!';
                         break;
                     case 'bishong':
                         resultTitle = '비숑';
                         resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultCeleb = '마숑! 드숑! 비숑!';
                         break;
                     case 'bulldog':
                         resultTitle = '불독';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = 'Fire!! Dog!!';
                         break;
                     case 'sibagyeon':
                         resultTitle = '시바견';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '시바견 : 너 나처럼 생겼어! 욕은 아닌거 알지?';
                         break;
                     case 'sichu':
                         resultTitle = '시츄';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '마이츄~ 시츄~';
                         break;
                     case 'yokshir':
                         resultTitle = '요크셔';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = 'Yo! 크셔! Yo! 크셔!';
                         break;
                     case 'chiwawa':
                         resultTitle = '치와와';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '치 : 치, 나 삐졌어' + "<br>" + '와 : 와알왈왈왈!!' + "<br>" + '와 : 와알왈왈왈!!';
                         break;
                     case 'poodle':
                         resultTitle = '푸들';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '머리 잘 말았네, 너 머리 어디서 했어?';
                         break;
                     case 'huskey':
                         resultTitle = '허스키';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '허스키를 닮아서 눈매가 스모키~!';
                         break;
                     case 'jindo':
                         resultTitle = '진돗개';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '진달래~ 도라지~ 개나리~';
                         break;
                     case 'retriever':
                         resultTitle = '리트리버';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '한강 말고 리트리버...';
                         break;
                     case 'bordercollie':
                         resultTitle = '보더콜리';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '브로콜리 먹으면 나처럼 예뻐짐 ㅎ';
                         break;
                     case 'dachshund':
                         resultTitle = '닥스훈트';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '닥스 훈스 트스';
                         break;
                     case 'pomeranian':
                         resultTitle = '포메라니안';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '포메라니...........안....';
                         break;
                     case 'samoyed':
                         resultTitle = '사모예드';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '사모하는 예쁜 당신에게 드립니다(찡긋)';
                         break;
                     case 'bullterrier':
                         resultTitle = '불테리어';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = 'Fire!! 테리어!!';
                         break;
                     case 'chowchow':
                         resultTitle = '차우차우';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '어쩌구저쩌구';
+                        resultExplain = '차(은)우...차(은)우....';
                         break;
                     default:
                         resultMessage = '앗! 다른 사진으로 시도해 보세요!';
                 }
-                var others = "<div class='other-breed mt-5 mb-5'>" + otherMessage + "</div>"
-								var division = "<hr class='division-line mb-5'>"
+                // var others = "<div class='other-breed mt-5 mb-5'>" + otherMessage + "</div>"
+								var division = "<hr class='division-line mt-5 mb-5'>"
                 var title = "<div class='" + prediction[0].className + "-title'>" + resultTitle + "</div>"
                 var percentage = "<div class='animal-percentage "+prediction[0].className+"-chartText pt-2'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
                 var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
-                var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
 								
-                $('.result-message').html(title + percentage + explain + celeb);
-								$('.otherresult-message').html(others + division);
+                $('.result-message').html(title + percentage + explain);
+								$('.otherresult-message').html(division);
 
 								$(function(){
 										// Get your file name here
@@ -503,6 +485,7 @@
     <footer class="footer container d-flex justify-content-center">
         <div>
             <p>이 앱은 개발자 아르미, 유튜버 조코딩님의 도움을 받아 제작 되었습니다.</p>
+						<p>강아지 사지 말고 입양하세요!</p>
             <p>&copy; 김지훈 2021. All Rights Reserved.</p>
         </div>
     </footer>
