@@ -261,8 +261,7 @@
                         break;
                     case 'bishong':
                         resultTitle = '비숑';
-                        resultExplain = '어쩌구저쩌구';
-                        resultCeleb = '마숑! 드숑! 비숑!';
+                        resultExplain = '마숑! 드숑! 비숑!';
                         break;
                     case 'bulldog':
                         resultTitle = '불독';
@@ -330,8 +329,8 @@
                 // var others = "<div class='other-breed mt-5 mb-5'>" + otherMessage + "</div>"
 								var division = "<hr class='division-line mt-5 mb-5'>"
                 var title = "<div class='" + prediction[0].className + "-title'>" + resultTitle + "</div>"
-                var percentage = "<div class='animal-percentage "+prediction[0].className+"-chartText pt-2'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
-                var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+                var percentage = "<div class='animal-percentage "+prediction[0].className+"-chartText pt-2 pb-5'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
+                var explain = "<div class='animal-explain pt-2 pb-2'>" + resultExplain + "</div>"
 								
                 $('.result-message').html(title + percentage + explain);
 								$('.otherresult-message').html(division);

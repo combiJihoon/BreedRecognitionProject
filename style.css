@@ -193,7 +193,7 @@ body {
 		}
 
 		.result-message .animal-explain {
-			font-size: 20px;
+			font-size: 18px;
 		}
 
 		#zero-result .zero-message {
@@ -283,7 +283,7 @@ img {
 }
 
 .animal-explain {
-	font-size: 25px;
+	font-size: 23px;
 }
 
 
