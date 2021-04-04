@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Nanum Gothic Coding' rel='stylesheet'> -->
-		<link href='https://fonts.googleapis.com/css?family=Do Hyeon' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Do Hyeon' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -91,12 +91,12 @@
 								</button>
             </div>
         </div> -->
-        <div id = "img-container" class="file-upload-content">
-						<!-- result-image src에 question mark 넣고 일단 hide 후 predict 후에 show -->
-	<!-- class="file-upload-image" -->
+        <div id="img-container" class="file-upload-content">
+            <!-- result-image src에 question mark 넣고 일단 hide 후 predict 후에 show -->
+            <!-- class="file-upload-image" -->
             <div class="loader">
-								<img class="file-upload-image" id="animal-image" src="#" alt="your image" / >
-								<img id="result-image" src="assets/question_mark.svg" alt="your image" / style="display: none;">
+                <img class="file-upload-image" id="animal-image" src="#" alt="your image" />
+                <img id="result-image" src="assets/question_mark.svg" alt="your image" / style="display: none;">
                 <div id="loading" class="loader-inner loading" style="display: none;">
                     <div class="loading-box">
                         <div class="circular-loader">
@@ -118,17 +118,18 @@
                 </div> -->
                 <!-- <div id="label-container" class="d-flex flex-column justify-content-around"> -->
                 <!-- </div> -->
-								<button type="button p-2" class="try-again-btn" onclick="window.location.reload()">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload()">
                     <span class="try-again-text">다른 사진으로 재시도</span>
                 </button>
-							
+
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <div class="addthis_inline_share_toolbox mt-5"></div>
-            
 
-								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6059b570b08a08b8"></script>
 
-								<p class="otherresult-message"></p>
+                <script type="text/javascript"
+                    src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6059b570b08a08b8"></script>
+
+                <p class="otherresult-message"></p>
                 <p id="zero-result" class="zero-container"></p>
 
                 <div class="b-skills">
@@ -139,7 +140,7 @@
                     </div>
                 </div>
                 <!-- <div class="modal-footer d-flex justify-content-center"> -->
-                
+
                 <!-- </div> -->
             </div>
 
@@ -172,8 +173,8 @@
                     init().then(() => {
                         console.log('hello');
                         predict();
-												// 여기에 src 변경해서 띄울 수 있는 방법 생각해 보기!
-												$('#result-image').show();
+                        // 여기에 src 변경해서 띄울 수 있는 방법 생각해 보기!
+                        $('#result-image').show();
                         $('#loading').hide();
                     });
                     // 모델을 불러오는 데 시간이 조금 걸림 -> 따라서 모델 불러오는 동안 predict가 실행되어서는 안됨
@@ -247,10 +248,10 @@
                 );
                 // console.log(prediction[0].className);
                 console.log(prediction[0].className);
-								
-								// imgContainer = document.getElementById("img-container");
-								// var resultUpload = '<img class="result-image" id="result-image" src="assets/'+prediction[0].className+'-result.jpeg" alt="your image" />'
-								// imgContainer.childNodes[0].innerHTML = resultUpload;
+
+                // imgContainer = document.getElementById("img-container");
+                // var resultUpload = '<img class="result-image" id="result-image" src="assets/'+prediction[0].className+'-result.jpeg" alt="your image" />'
+                // imgContainer.childNodes[0].innerHTML = resultUpload;
 
                 var resultTitle, resultExplain, resultCeleb, resultPercent;
                 // var otherMessage = '나와 닮은 다른 견종은 뭐가 있을까?';
@@ -327,92 +328,92 @@
                         resultMessage = '앗! 다른 사진으로 시도해 보세요!';
                 }
                 // var others = "<div class='other-breed mt-5 mb-5'>" + otherMessage + "</div>"
-								var division = "<hr class='division-line mt-5 mb-5'>"
+                var division = "<hr class='division-line mt-5 mb-5'>"
                 var title = "<div class='" + prediction[0].className + "-title'>" + resultTitle + "</div>"
-                var percentage = "<div class='animal-percentage "+prediction[0].className+"-chartText pt-2 pb-5'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
+                var percentage = "<div class='animal-percentage " + prediction[0].className + "-chartText pt-2 pb-5'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
                 var explain = "<div class='animal-explain pt-2 pb-2'>" + resultExplain + "</div>"
-								
+
                 $('.result-message').html(title + percentage + explain);
-								$('.otherresult-message').html(division);
+                $('.otherresult-message').html(division);
 
-								$(function(){
-										// Get your file name here
-									var imgfilename = "assets/results/"+prediction[0].className+"-result.jpeg";
+                $(function () {
+                    // Get your file name here
+                    var imgfilename = "assets/results/" + prediction[0].className + "-result.jpeg";
 
-									// Set your file name
-									$('#result-image').attr('src', imgfilename);
-								});
+                    // Set your file name
+                    $('#result-image').attr('src', imgfilename);
+                });
 
                 for (let i = 1; i < maxPredictions; i++) {
                     var labelTitle;
                     switch (prediction[i].className) {
                         case 'maltiz':
                             labelTitle = '말티즈';
-														labelColor = '#66CDAA';
+                            labelColor = '#66CDAA';
                             break;
                         case 'bishong':
                             labelTitle = '비숑';
-														labelColor = '#7B68EE';
+                            labelColor = '#7B68EE';
                             break;
                         case 'bulldog':
                             labelTitle = '불독';
-														labelColor = '#28B4B4';
+                            labelColor = '#28B4B4';
                             break;
                         case 'sibagyeon':
                             labelTitle = '시바견';
-														labelColor = '#FF8C0A';
+                            labelColor = '#FF8C0A';
                             break;
                         case 'sichu':
                             labelTitle = '시츄';
-														labelColor = '#FF98A3';
+                            labelColor = '#FF98A3';
                             break;
                         case 'yokshir':
                             labelTitle = '요크셔';
-														labelColor = '#FF4646';
+                            labelColor = '#FF4646';
                             break;
                         case 'chiwawa':
                             labelTitle = '치와와';
-														labelColor = '#FF7F50';
+                            labelColor = '#FF7F50';
                             break;
                         case 'poodle':
                             labelTitle = '푸들';
-														labelColor = '#FF73BE';
+                            labelColor = '#FF73BE';
                             break;
                         case 'huskey':
                             labelTitle = '허스키';
-														labelColor = '#A30FE2';
+                            labelColor = '#A30FE2';
                             break;
                         case 'jindo':
                             labelTitle = '진돗개';
-														labelColor = '#c646c6';
+                            labelColor = '#c646c6';
                             break;
                         case 'retriever':
                             labelTitle = '리트리버';
-														labelColor = '#FF96FF';
+                            labelColor = '#FF96FF';
                             break;
                         case 'bordercollie':
                             labelTitle = '보더콜리';
-														labelColor = '#C73399';
+                            labelColor = '#C73399';
                             break;
                         case 'dachshund':
                             labelTitle = '닥스훈트';
-														labelColor = '#FF8200';
-														break;
+                            labelColor = '#FF8200';
+                            break;
                         case 'pomeranian':
                             labelTitle = '포메라니안';
-														labelColor = '#FF5050';
+                            labelColor = '#FF5050';
                             break;
                         case 'samoyed':
                             labelTitle = '사모예드';
-														labelColor = '#4646CD';
+                            labelColor = '#4646CD';
                             break;
                         case 'bullterrier':
                             labelTitle = '불테리어';
-														labelColor = '#FF9E7D';
+                            labelColor = '#FF9E7D';
                             break;
                         case 'chowchow':
                             labelTitle = '차우차우';
-														labelColor = '#5A78AF';
+                            labelColor = '#5A78AF';
                             break;
                     }
                     // horizontal aligning : d-flex flex-row
@@ -458,9 +459,9 @@
 
 
                     });
-										
 
-										zeroContainer =  document.getElementById("zero-result");
+
+                    zeroContainer = document.getElementById("zero-result");
                     if (prediction[1].probability.toFixed(2) * 100 <= 1) {
                         var zeroMessage = '<div class="zero-message">어머!<br>' + resultTitle + '하고 똑같이 생기셨네요!</div>'
                         $('.zero-container').html(zeroMessage);
@@ -469,10 +470,10 @@
                     }
                     else {
                         if (i < 5) {
-														var predictProb = Math.round(prediction[i].probability.toFixed(3) * 100)
-														var zeroController = (predictProb == 0) ? "1" : (predictProb)
-                    				console.log(prediction[i].probability.toFixed(2) * 100)
-                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="'+labelColor+'"><span class="percent '+prediction[i].className+'-chartText" data-after=" %">' + zeroController + '</span></div></div><p class="'+prediction[i].className+'-chartText">' + labelTitle + '</p></div>';
+                            var predictProb = Math.round(prediction[i].probability.toFixed(3) * 100)
+                            var zeroController = (predictProb == 0) ? "1" : (predictProb)
+                            console.log(prediction[i].probability.toFixed(2) * 100)
+                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="' + labelColor + '"><span class="percent ' + prediction[i].className + '-chartText" data-after=" %">' + zeroController + '</span></div></div><p class="' + prediction[i].className + '-chartText">' + labelTitle + '</p></div>';
                             labelContainer.childNodes[i].innerHTML = showPercent;
                         }
                     }
@@ -481,10 +482,15 @@
 
         </script>
     </div>
+    <div class="ad-banner mt-5 pt-5">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-67iS5rRmb7DfsIcI" data-ad-width="320"
+            data-ad-height="100"></ins>
+    </div>
     <footer class="footer container d-flex justify-content-center">
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
         <div>
             <p>이 앱은 개발자 아르미, 유튜버 조코딩님의 도움을 받아 제작 되었습니다.</p>
-						<p>강아지 사지 말고 입양하세요!</p>
+            <p>강아지 사지 말고 입양하세요!</p>
             <p>&copy; 김지훈 2021. All Rights Reserved.</p>
         </div>
     </footer>
