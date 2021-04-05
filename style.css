@@ -100,9 +100,9 @@ body {
 }
 
 .file-upload-image {
-    height: auto;
-    max-width: 40%;
-    /* margin: auto; */
+    max-height: 60%;
+    max-width: 60%;
+    margin: auto;
     padding: 10px;
 }
 
@@ -236,32 +236,10 @@ h4 {
     margin: 0 auto;
 }
 
-#logo {
-	width: 30%;
-	height: 30%;
-}
-
-/* #logo {
-    width: 20%;
+img {
+    width: 40%;
     height: 20%;
-} */
-
-.upload {
-	  width: 30%;
-    height: 30%;
 }
-
-.loader #result-image {
-	max-width: 40%;
-	height: auto;
-}
-
-/* .resultImage-area {
-		display: flex;
-	  width: 30%;
-    height: 30%;
-} */
-
 
 .try-again-btn {
 	border-radius: 15px;
