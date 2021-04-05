@@ -163,7 +163,7 @@
         <script>
             function readURL(input) {
                 if (input.files && input.files[0]) {
-                    var reader = new FileReader();
+                    let reader = new FileReader();
 
                     reader.onload = function (e) {
                         $('.image-upload-wrap').hide();
@@ -235,7 +235,7 @@
                 labelContainer = document.getElementById("label-container");
                 for (let i = 0; i < maxPredictions; i++) {
                     // and class labels
-                    var element = document.createElement("div")
+                    let element = document.createElement("div")
                     element.classList.add("col-6", "col-xs-6", "col-sm-6", "col-md-3");
                     labelContainer.appendChild(element);
                 }
@@ -244,7 +244,7 @@
             // run the webcam image through the image model
             async function predict() {
                 // predict can take in an image, video or canvas html element
-                var image = document.getElementById('animal-image');
+                let image = document.getElementById('animal-image');
                 const prediction = await model.predict(image, false);
 
                 prediction.sort(
@@ -257,7 +257,7 @@
                 // var resultUpload = '<img class="result-image" id="result-image" src="assets/'+prediction[0].className+'-result.jpeg" alt="your image" />'
                 // imgContainer.childNodes[0].innerHTML = resultUpload;
 
-                var resultTitle, resultExplain, resultCeleb, resultPercent;
+                let resultTitle, resultExplain, resultCeleb, resultPercent;
                 // var otherMessage = '나와 닮은 다른 견종은 뭐가 있을까?';
                 switch (prediction[0].className) {
                     case 'maltiz':
@@ -332,24 +332,24 @@
                         resultMessage = '앗! 다른 사진으로 시도해 보세요!';
                 }
                 // var others = "<div class='other-breed mt-5 mb-5'>" + otherMessage + "</div>"
-                var division = "<hr class='division-line mt-5 mb-5'>"
-                var title = "<div class='" + prediction[0].className + "-title'>" + resultTitle + "</div>"
-                var percentage = "<div class='animal-percentage " + prediction[0].className + "-chartText pt-2 pb-5'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
-                var explain = "<div class='animal-explain pt-2 pb-2'>" + resultExplain + "</div>"
+                let division = "<hr class='division-line mt-5 mb-5'>"
+                let title = "<div class='" + prediction[0].className + "-title'>" + resultTitle + "</div>"
+                let percentage = "<div class='animal-percentage " + prediction[0].className + "-chartText pt-2 pb-5'>" + Math.round(prediction[0].probability.toFixed(2) * 100) + "%</div>"
+                let explain = "<div class='animal-explain pt-2 pb-2'>" + resultExplain + "</div>"
 
                 $('.result-message').html(title + percentage + explain);
                 $('.otherresult-message').html(division);
 
                 $(function () {
                     // Get your file name here
-                    var imgfilename = "assets/results/" + prediction[0].className + "-result.jpeg";
+                    let imgfilename = "assets/results/" + prediction[0].className + "-result.jpeg";
 
                     // Set your file name
                     $('#result-image').attr('src', imgfilename);
                 });
 
                 for (let i = 1; i < maxPredictions; i++) {
-                    var labelTitle;
+                    let labelTitle;
                     switch (prediction[i].className) {
                         case 'maltiz':
                             labelTitle = '말티즈';
@@ -422,10 +422,10 @@
                     }
                     // horizontal aligning : d-flex flex-row
 
-                    var $window = $(window);
+                    let $window = $(window);
 
                     function run() {
-                        var fName = arguments[0],
+                        let fName = arguments[0],
                             aArgs = Array.prototype.slice.call(arguments, 1);
                         try {
                             fName.apply(window, aArgs);
@@ -467,17 +467,17 @@
 
                     zeroContainer = document.getElementById("zero-result");
                     if (prediction[1].probability.toFixed(2) * 100 <= 1) {
-                        var zeroMessage = '<div class="zero-message">어머!<br>' + resultTitle + '하고 똑같이 생기셨네요!</div>'
+                        let zeroMessage = '<div class="zero-message">어머!<br>' + resultTitle + '하고 똑같이 생기셨네요!</div>'
                         $('.zero-container').html(zeroMessage);
                         break;
                         // zeroContainer.childNodes[i].innerHTML = zeroMessage;
                     }
                     else {
                         if (i < 5) {
-                            var predictProb = Math.round(prediction[i].probability.toFixed(3) * 100)
-                            var zeroController = (predictProb == 0) ? "1" : (predictProb)
+                            let predictProb = Math.round(prediction[i].probability.toFixed(3) * 100)
+                            let zeroController = (predictProb == 0) ? "1" : (predictProb)
                             console.log(prediction[i].probability.toFixed(2) * 100)
-                            var showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="' + labelColor + '"><span class="percent ' + prediction[i].className + '-chartText" data-after=" %">' + zeroController + '</span></div></div><p class="' + prediction[i].className + '-chartText">' + labelTitle + '</p></div>';
+                            let showPercent = '<div class="skill-item center-block"><div class="chart-container"><div class="chart " data-percent="' + zeroController + '"data-bar-color="' + labelColor + '"><span class="percent ' + prediction[i].className + '-chartText" data-after=" %">' + zeroController + '</span></div></div><p class="' + prediction[i].className + '-chartText">' + labelTitle + '</p></div>';
                             labelContainer.childNodes[i].innerHTML = showPercent;
                         }
                     }
