@@ -1,20 +1,4 @@
-# 닮은꼴 강아지 테스트 웹
-
-[페이지 URL]
-
-## 1. 사진 크롤링
-
-- google_images_download 라이브러리 이용
-
-## 2. Machine Learning
-
-- 구글의 'Teachable Machine' 이용
-
-## 3. 웹 사이트 구현
-
-- HTML/Javascript 이용
-
-# 닮은꼴 강아지 테스트 :books:
+# 닮은꼴 강아지 테스트 :dog:
 
 [닮은꼴 강아지 테스트]: https://dogsbreedrecognition.netlify.app/ "닮은꼴 강아지 테스트"
 
