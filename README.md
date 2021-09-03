@@ -1,6 +1,6 @@
 # 닮은꼴 강아지 테스트 :dog:
 
-[닮은꼴 강아지 테스트]: https://dogsbreedrecognition.netlify.app/ "닮은꼴 강아지 테스트"
+[닮은꼴 강아지 테스트 해보기](https://dogsbreedrecognition.netlify.app/)
 
 ## **1. 프로젝트 소개**
 
